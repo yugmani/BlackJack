@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+  height: 100vh;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+}
+
+#page-title {
+  text-align: center;
+  color: BLUE;
+}
+
+.challenge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.challenge-header {
+  text-align: center;
+  flex-basis: 40%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.challenge-content {
+  flex-basis: 60%;
+  align-self: flex-start;
+  border-left: 1px solid gray;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+#age-form {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.box-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submit-age,
+.reset-age {
+  width: 100px;
+  margin-right: 25px;
+  padding: 5px;
+
+  color: white;
+}
+
+.submit-age {
+  background-color: navy;
+}
+.reset-age {
+  background-color: red;
+}
+
+#age-days {
+  color: navy;
+}

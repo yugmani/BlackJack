@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="page-title">HAVE A FUN! WIN THE GAME!</h1>
+
+      <div class="challenge">
+        <div class="challenge-header">
+          <h2>HOW OLD ARE YOU?</h2>
+          <h3>Your Age in Days/Months/Years</h3>
+        </div>
+
+        <div class="challenge-content">
+          <form id="age-form" action="">
+            <label for="date">Enter your birth date:</label>
+            <input id="birth-date" name="date" type="date" />
+          </form>
+          <div class="box-buttons">
+            <button class="submit-age" type="submit">Click me</button>
+            <button class="reset-age">Reset</button>
+          </div>
+          <h2>You are <span id="age-days">............. </span> days old.</h2>
+          <h2>
+            You are <span id="age-months">............. </span> months old.
+          </h2>
+          <h2>You are <span id="age-years">............. </span> years old.</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
