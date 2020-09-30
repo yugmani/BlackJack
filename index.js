@@ -40,7 +40,7 @@ function getCats() {
 
 function generateCat(images) {
   let newImage = document.createElement("img");
-  let div = document.querySelector("#cats-result");
+  let catResult = document.querySelector("#cats-result");
   newImage.setAttribute("class", "cats-item");
 
   for (image of images) {
@@ -51,7 +51,66 @@ function generateCat(images) {
     newImage.width = "300";
     newImage.height = "300";
   }
-  div.appendChild(newImage);
+  catResult.appendChild(newImage);
 }
 
 generateCats.addEventListener("click", getCats);
+var selected = "";
+function randomItem() {
+  const items = ["rocks", "papers", "scissors"];
+  const index = Math.floor(Math.random() * 3);
+  selected = items[index];
+  // console.log("computer: " + selected);
+  return selected;
+}
+
+// ROCK SCISSORS AND PAPERS GAME
+let element = "";
+let message = "";
+const rpsItems = document.querySelectorAll(".rps-item");
+const rpsResult = document.querySelector("#rps-result");
+
+for (i = 0; i < rpsItems.length; i++) {
+  rpsItems[i].addEventListener("click", function (event) {
+    element = event.target;
+
+    for (j = 0; j < rpsItems.length; j++) {
+      rpsItems[j].style.boxShadow = "0 0 8px 2px gray";
+    }
+
+    // element.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.5)";
+
+    const idItem = element.id;
+    // console.log("Your item: " + idItem);
+
+    randomItem();
+
+    if (selected == "rocks" && idItem == "papers") {
+      message = `<h1 class="win">You are the Winner!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px #008000";
+    } else if (selected == "rocks" && idItem == "scissors") {
+      message = `<h1 class="fail">Oops ! You lost the Game! Try Again!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px red";
+    } else if (selected == "papers" && idItem == "rocks") {
+      message = `<h1 class="fail">Oops ! You lost the Game! Try Again!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px red";
+    } else if (selected == "papers" && idItem == "scissors") {
+      message = `<h1 class="win">You are the Winner!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px #008000";
+    } else if (selected == "scissors" && idItem == "rocks") {
+      message = `<h1 class="win">You are the Winner!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px #008000";
+    } else if (selected == "scissors" && idItem == "papers") {
+      message = `<h1 class="fail">Oops ! You lost the Game! Try Again!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px red";
+    } else {
+      message = `<h1 class="tie">Tie! Tie! Try Again!</h1>`;
+      element.style.boxShadow = "0 0 8px 2px yellow";
+    }
+
+    const selectedId = document.getElementById(`${selected}`);
+    // console.log("selected id: " + selectedId);
+    selectedId.style.boxShadow = "0 0 8px 2px #FF00FF";
+    rpsResult.innerHTML = message;
+  });
+}
