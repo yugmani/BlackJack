@@ -6,38 +6,44 @@ body {
 .container {
   margin: 0 auto;
   width: 60%;
-  height: 100vh;
-  background-color: whitesmoke;
+  height: auto;
   border: 1px solid gray;
 }
 
 #page-title {
   text-align: center;
-  color: BLUE;
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.challenge {
+.age-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid gray;
   border-top: 1px solid gray;
+  background-color: whitesmoke;
 }
 
-.challenge-header {
+.age-title {
   text-align: center;
   flex-basis: 40%;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.challenge-content {
+.age-content {
   flex-basis: 60%;
   align-self: flex-start;
   border-left: 1px solid gray;
   padding-left: 20px;
-  padding-right: 20px;
   padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 #age-form {
@@ -52,21 +58,57 @@ body {
 }
 
 .submit-age,
-.reset-age {
-  width: 100px;
+.reset-age,
+.gen-cats {
   margin-right: 25px;
   padding: 5px;
-
+  border-radius: 5px;
   color: white;
+  font-size: 20px;
 }
 
 .submit-age {
+  width: 100px;
   background-color: navy;
 }
 .reset-age {
+  width: 100px;
   background-color: red;
 }
 
 #age-days {
   color: navy;
+}
+
+.gen-cats {
+  width: 150px;
+  background-color: navy;
+}
+
+#cats-result {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 335px;
+  background-color: lightyellow;
+}
+
+.cat-container-title {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+  background-color: lightpink;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cats-item {
+  margin: 20px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+  background-color: white;
 }

@@ -10,26 +10,48 @@
     <div class="container">
       <h1 id="page-title">HAVE A FUN! WIN THE GAME!</h1>
 
-      <div class="challenge">
-        <div class="challenge-header">
+      <div class="age-container">
+        <div class="age-title">
           <h2>HOW OLD ARE YOU?</h2>
           <h3>Your Age in Days/Months/Years</h3>
         </div>
 
-        <div class="challenge-content">
+        <div class="age-content">
           <form id="age-form" action="">
             <label for="date">Enter your birth date:</label>
             <input id="birth-date" name="date" type="date" />
           </form>
           <div class="box-buttons">
-            <button class="submit-age" type="submit">Click me</button>
+            <button class="submit-age" type="submit">Submit</button>
             <button class="reset-age">Reset</button>
           </div>
-          <h2>You are <span id="age-days">............. </span> days old.</h2>
-          <h2>
-            You are <span id="age-months">............. </span> months old.
-          </h2>
-          <h2>You are <span id="age-years">............. </span> years old.</h2>
+          <div id="age-result">
+            <h2>You are <span id="age-days">............. </span> days old.</h2>
+            <h2>
+              You are <span id="age-months">............. </span> months old.
+            </h2>
+            <h2>
+              You are <span id="age-years">............. </span> years old.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="cat-container">
+        <div class="cat-container-title">
+          <h2>DO YOU LOVE PETS?</h2>
+          <h3>Let's See My Favorite Pets (Cats)</h3>
+          <button class="gen-cats" type="submit">Generate Cats</button>
+        </div>
+        <div id="cats-result">
+          <!-- <img
+            src="https://media.tenor.com/images/82517b1fbf01e0db1c2636319e2c6965/tenor.gif"
+          />
+          <img
+            src="https://media.tenor.com/images/82517b1fbf01e0db1c2636319e2c6965/tenor.gif"
+          />
+          <img
+            src="https://media.tenor.com/images/82517b1fbf01e0db1c2636319e2c6965/tenor.gif"
+          /> -->
         </div>
       </div>
     </div>
