@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlackJack</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="colors.css" />
+    <link rel="stylesheet" href="./blackjack.css" />
   </head>
   <body>
     <div class="container">
@@ -26,16 +28,91 @@
             <button class="reset-age">Reset</button>
           </div>
           <div id="age-result">
-            <h2>You are <span id="age-days">............. </span> days old.</h2>
             <h2>
-              You are <span id="age-months">............. </span> months old.
+              You are <span id="age-days">............. </span> &nbsp;days old.
             </h2>
             <h2>
-              You are <span id="age-years">............. </span> years old.
+              You are <span id="age-months">............. </span> &nbsp;months
+              old.
+            </h2>
+            <h2>
+              You are <span id="age-years">............. </span> &nbsp;years
+              old.
             </h2>
           </div>
         </div>
       </div>
+
+      <div class="color-container">
+        <div class="color-selector">
+          <label for="cars">Choose Your Color:</label>
+          <select name="colors" id="colors">
+            <option value="random" selected>Random</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="reset">Reset</option>
+          </select>
+        </div>
+        <div class="color-buttons">
+          <buttons id="red" class="color" type="text">JavaScript</buttons>
+          <buttons id="green" class="color" type="text">Python</buttons>
+          <buttons id="blue" class="color" type="text">React</buttons>
+          <buttons id="yellow" class="color" type="text">HTML/CSS</buttons>
+        </div>
+      </div>
+
+      <div class="rps-container">
+        <div class="rps-container-title">
+          <h2>DO YOU LOVE PLAYING GAMES?</h2>
+
+          <div id="rps-result">
+            <h2>Let's Play Rock-Paper-Scissors Game and Win!</h2>
+          </div>
+        </div>
+
+        <div id="rps-items-container">
+          <img class="rps-item" id="rocks" src="./images/rocks.png" />
+          <img class="rps-item" id="papers" src="./images/papers.png" />
+          <img class="rps-item" id="scissors" src="./images/scissors.jpg" />
+        </div>
+      </div>
+
+      <div class="blackjack-container">
+        <div class="blackjack-title">
+          <h2>BLACKJACK CHALLENGE!</h2>
+          <h3>Let's Play and Win!</h3>
+        </div>
+        <div class="blackjack-playground">
+          <div class="row1">
+            <div id="you-player">
+              <h2>You: <span id="your-blackjack-result">0</span></h2>
+            </div>
+            <div id="dealer-player">
+              <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+          </div>
+          <div class="row2">
+            <button id="blackjack-hit" class="starter">Hit</button>
+            <button id="blackjack-stand" class="starter">Stand</button>
+            <button id="blackjack-dealer" class="starter">Deal</button>
+          </div>
+        </div>
+        <div class="blackjack-result">
+          <table class="blackjack-score">
+            <tr>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Draws</th>
+            </tr>
+            <tr>
+              <td><span id="wins">0</span></td>
+              <td><span id="losses">0</span></td>
+              <td><span id="draws">0</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
       <div class="cat-container">
         <div class="cat-container-title">
           <h2>DO YOU LOVE PETS?</h2>
@@ -58,23 +135,10 @@
           /> -->
         </div>
       </div>
-      <div class="rps-container">
-        <div class="rps-container-title">
-          <h2>DO YOU LOVE PLAYING GAMES?</h2>
-
-          <div id="rps-result">
-            <h2>Let's Play Rock-Paper-Scissors Game and Win!</h2>
-          </div>
-        </div>
-
-        <div id="rps-items-container">
-          <img class="rps-item" id="rocks" src="./images/rocks.png" />
-          <img class="rps-item" id="papers" src="./images/papers.png" />
-          <img class="rps-item" id="scissors" src="./images/scissors.jpg" />
-        </div>
-      </div>
     </div>
 
     <script src="index.js"></script>
+    <script src="colorButton.js"></script>
+    <script src="blackjack.js"></script>
   </body>
 </html>

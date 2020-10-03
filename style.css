@@ -76,8 +76,13 @@ body {
   background-color: red;
 }
 
-#age-days {
-  color: navy;
+#age-days,
+#age-months,
+#age-years {
+  width: 50px;
+  background-color: #7fff00;
+  color: white;
+  padding: 5px;
 }
 
 .gen-cats {

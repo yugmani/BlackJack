@@ -10,10 +10,10 @@ const generateCats = document.querySelector(".gen-cats");
 function findAge() {
   const today = new Date();
   let birthday = inputBirthday.value;
-  var age = Math.abs(new Date() - new Date(birthday.replace(/-/g, "/")));
+  var age = Math.floor(new Date() - new Date(birthday.replace(/-/g, "/")));
   ageInDays.textContent = Math.floor(age / (1000 * 60 * 60 * 24));
   ageInMonths.textContent = Math.floor(age / (1000 * 60 * 60 * 24 * 30));
-  ageInYears.textContent = Math.floor(age / (1000 * 60 * 60 * 24 * 30 * 12));
+  ageInYears.textContent = Math.floor(age / (1000 * 60 * 60 * 24 * 365));
 }
 
 // Event listener to display age
