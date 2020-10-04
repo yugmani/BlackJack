@@ -1,7 +1,7 @@
 const selectOptions = document.getElementById("colors");
-
+const userSelected = selectOptions.options[selectOptions.selectedIndex].value;
+// console.log(userSelected);
 const colorButtons = document.querySelectorAll(".color");
-
 const random = ["pink", "gray", "brown", "orange"];
 
 // console.log(random[randomIndex]);
